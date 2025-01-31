@@ -10,6 +10,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login {
+	
+	
+       /// Login Check
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Testing started");
 
@@ -20,7 +23,8 @@ public class Login {
         driver.get("https://vividtranstech.com/tancem/#/login");
 
         // Perform sign-in
-        driver.findElement(By.xpath("(//span[text()='Sign In'])")).click();
+        Thread.sleep(1000);
+        driver.findElement(By.xpath("(//span[text()=' Sign In '])")).click();
         System.out.println("Login successful");
         
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

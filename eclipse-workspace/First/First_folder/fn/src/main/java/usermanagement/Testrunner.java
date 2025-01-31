@@ -15,7 +15,8 @@ public class Testrunner {
 
         // Call the grade and section methods from the master class
 		  //sampath
-		  master.grade(driver); // Calling the method for 'GradeT' workflow
+     // Calling the method for 'GradeT' workflow
+		  master.grade(driver); 
 		  master.section(driver);
 		  master.designation(driver);
 		  
