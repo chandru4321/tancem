@@ -14,8 +14,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class master {
-        //Master  Changes 
-    // Method to perform login and workflow actions
+// masters will be updated 
+	// Method to perform login and workflow actions
     public static void grade(WebDriver driver) {
         try {
             // Initialize WebDriverWait
