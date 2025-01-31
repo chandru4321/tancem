@@ -14,7 +14,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class master {
-
+        //Master  Changes 
     // Method to perform login and workflow actions
     public static void grade(WebDriver driver) {
         try {
@@ -22,7 +22,7 @@ public class master {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
             // Perform sign-in
-            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()='Sign In'])"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//span[text()=' Sign In '])"))).click();
             System.out.println("Login successful");
 
             // Wait for the 'WORKFLOW' section to be clickable
@@ -171,10 +171,23 @@ public class master {
                 System.out.println("Designation 'Permanent Employee' selected.");
 
                 // Wait for the 'Reporting Section Designation' dropdown to be clickable, then select 'Finance Hod'
+                Thread.sleep(1000);
                 WebElement reportingSectionDesignationDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='reportingSectionDesignationId']")));
                 reportingSectionDesignationDropdown.click();
                 actions.moveToElement(driver.findElement(By.xpath("//span[text()='Finance Hod']"))).click().build().perform();
                 System.out.println("Reporting Section Designation 'Finance Hod' selected.");
+                
+                Thread.sleep(1000);
+                WebElement office = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='officeId']")));
+                reportingSectionDesignationDropdown.click();
+                actions.moveToElement(driver.findElement(By.xpath("//span[text()='Alangulam']"))).click().build().perform();
+                System.out.println("Reporting Section Designation 'Finance Hod' selected.");
+                
+                
+                
+                
+                
+                
                 
                 
                 wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@data-text='Approval']"))).click();
