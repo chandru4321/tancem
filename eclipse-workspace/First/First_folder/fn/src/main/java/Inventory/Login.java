@@ -1,4 +1,4 @@
-package usermanagement;
+package Inventory;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Login{
+	//login pannel
     public static void main(String[] args) throws InterruptedException {
         System.out.println("Testing started");
 
