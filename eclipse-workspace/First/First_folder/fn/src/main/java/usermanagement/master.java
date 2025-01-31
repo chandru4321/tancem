@@ -17,7 +17,7 @@ public class master {
 	//git updated status checking 
 	
 	
-	
+	 
 // masters will be updated  Asap
 	// Method to perform login and workflow actions
     public static void grade(WebDriver driver) {
@@ -226,10 +226,7 @@ public class master {
 }
 
   
-    
-    
-    
-    
+ 
     
     
     
