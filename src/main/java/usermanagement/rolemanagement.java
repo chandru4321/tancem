@@ -16,6 +16,7 @@ public class rolemanagement {
 
 	public    static  void rolemaster(WebDriver driver) {
 	    try {
+	    	// the process is completed 
 	        // Initialize WebDriverWait with a timeout of 10 seconds
 	        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
