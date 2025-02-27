@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class master {
 
     // Method to perform login and workflow actions
+	//the added files 
     public static void grade(WebDriver driver) {
         try {
             // Initialize WebDriverWait
