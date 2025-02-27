@@ -1,0 +1,302 @@
+package Inventory;
+
+import java.time.Duration;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class item_request {
+	
+
+	public static void itemcreation(WebDriver driver) {
+        try {
+            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+
+            // Wait for the 'Gate Pass' button to be clickable and click it
+            WebElement gatePassButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()=' Item Request']")));
+            gatePassButton.click();
+            System.out.println("Item clicked.");
+
+            
+            // Wait for the 'Create' button to be clickable and click it
+            WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[normalize-space()='Create']")));
+            createButton.click();
+            System.out.println("Create button clicked.");
+            
+            Thread.sleep(1000);
+            WebElement materialTypeDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='materialType']")));
+            materialTypeDropdown.click();
+            Actions actions = new Actions(driver);
+
+            actions.moveToElement(driver.findElement(By.xpath("//span[text()='Raw Material']"))).click().build().perform();
+            System.out.println("Material type selected: Raw material");
+
+           Thread.sleep(1000);
+            
+            WebElement maingroup = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='mainGroupId']")));
+            maingroup.click();
+            Actions action2 = new Actions(driver);
+
+            action2.moveToElement(driver.findElement(By.xpath("//span[text()='CHEMICALS - MG0007']"))).click().build().perform();
+            System.out.println("Main Group  selected: chemical");
+            
+Thread.sleep(1000);
+            
+            WebElement Tierone  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='subGroupId']")));
+            Tierone.click();
+            Actions action3 = new Actions(driver);
+
+            action3.moveToElement(driver.findElement(By.xpath("//span[text()='LAB - SG0005']"))).click().build().perform();
+            System.out.println("Main Group  selected: chemical");
+
+
+
+            //Thread.sleep(1000);
+            
+            //WebElement Tieronegroup  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='subGroupId']")));
+      //  Tieronegroup.click();
+        //    Actions action4 = new Actions(driver);
+
+         //////   action4.moveToElement(driver.findElement(By.xpath("//span[text()='DUMBERS - SG0001']"))).click().build().perform();
+            //System.out.println("Main Group  selected: chemical");
+            
+            
+Thread.sleep(1000);
+            
+            WebElement TierTwoGroup  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='subSubGroupId']")));
+TierTwoGroup.click();
+            Actions action5 = new Actions(driver);
+
+            action5.moveToElement(driver.findElement(By.xpath("//span[text()='GLASSWARE - SSG0004']"))).click().build().perform();
+            System.out.println("Main Group  selected: chemical");
+            
+            
+Thread.sleep(1000);
+            
+            WebElement department  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='departmentId']")));
+department.click();
+            Actions action6 = new Actions(driver);
+
+            action6.moveToElement(driver.findElement(By.xpath("//span[text()='Inventory']"))).click().build().perform();
+            System.out.println("Main Group  selected: chemical");
+            
+            
+            
+            
+Thread.sleep(1000);
+            
+            WebElement departmenid  = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='departmentId']")));
+department.click();
+            Actions action8 = new Actions(driver);
+
+            action8.moveToElement(driver.findElement(By.xpath("//span[text()='Inventory']"))).click().build().perform();
+            System.out.println("Main Group  selected: chemical");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            Thread.sleep(1000);  // Add delay for dropdown to open
+            WebElement supplierNameDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='supplierId']")));
+            supplierNameDropdown.click();
+            Actions actions222 = new Actions(driver);
+            actions222.moveToElement(driver.findElement(By.xpath("//span[text()='Hyatt Regency']"))).click().build().perform();
+            System.out.println("Supplier selected: Hyatt Regency");
+
+            // Select department
+            WebElement departmentDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='departmentId']")));
+            departmentDropdown.click();
+            actions.moveToElement(driver.findElement(By.xpath("//span[text()='Inventory']"))).click().build().perform();
+            System.out.println("Department selected: Inventory");
+
+            // Select material type
+           // WebElement materialTypeDropdown11= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='materialType']")));
+          //  materialTypeDropdown11.click();
+         //   actions.moveToElement(driver.findElement(By.xpath("//span[text()='Raw material']"))).click().build().perform();
+          //  System.out.println("Material type selected: Raw material");
+
+            // Fill in vehicle details
+            Thread.sleep(1000);
+            driver.findElement(By.xpath("//input[@formcontrolname='itemSpec']")).sendKeys("TN45 4433");
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//input[@formcontrolname='itemAnnexure']")).sendKeys("rAMESH");
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//input[@formcontrolname='hsnCode']")).sendKeys("9094494949");
+            System.out.println("Vehicle details entered.");
+            
+Thread.sleep(1000);
+            
+            WebElement itemcategory= wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='materialType']")));
+            itemcategory.click();
+            actions.moveToElement(driver.findElement(By.xpath("//span[text()='Asset']"))).click().build().perform();
+            System.out.println("Material type selected: Raw material");
+            
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//textarea[@formcontrolname='itemDescription']")).sendKeys("TN45 4433");
+            Thread.sleep(1000);
+
+            driver.findElement(By.xpath("//textarea[@formcontrolname='remarks']")).sendKeys("TN45 4433");
+
+            
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+      
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // Click the next element
+            driver.findElement(By.cssSelector(".row.mt-2")).click();
+            
+          //  JavascriptExecutor js = (JavascriptExecutor) driver;
+          //  WebElement element = driver.findElement(By.xpath("//p-dropdown[@formcontrolname='freightIndicator']"));
+            //js.executeScript("arguments[0].scrollIntoView(true);", element); // Scrolls to the element
+         //   element.click();  // Then try clicking the element again
+          //  System.out.println("Element clicked after scrolling.");
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+          
+            // Fill in freight amount and despatch reference
+            driver.findElement(By.xpath("//input[@formcontrolname='freightAmount']")).sendKeys("1000");
+            driver.findElement(By.xpath("//input[@formcontrolname='despatchRef']")).sendKeys("yes already paid");
+            System.out.println("Freight amount and despatch reference entered.");
+            driver.findElement(By.cssSelector(".row.mt-2")).click();
+
+
+            // Wait and click on 'Entry Point' dropdown
+            Thread.sleep(2000);
+            
+            System.out.println("Threrr is to be an ended ");
+            
+            
+            
+            
+            
+
+         //   WebElement entryPointDropdown = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//p-dropdown[@formcontrolname='entryPoint']")));
+          //  entryPointDropdown.click();
+          //  actions.moveToElement(driver.findElement(By.xpath("//span[text()='First Point']"))).click().build().perform();
+          //  System.out.println("Entry point selected: First Point");
+            
+            
+            
+            
+            
+            
+
+            // Fill in entry time and remarks
+            driver.findElement(By.xpath("//input[@formcontrolname='entryTime']")).sendKeys("1233");
+            driver.findElement(By.xpath("//textarea[@formcontrolname='remarks']")).sendKeys("Raw material form submitted");
+            System.out.println("Entry time and remarks entered.");
+
+        } catch (ElementClickInterceptedException e) {
+            System.out.println("Element click intercepted: " + e.getMessage());
+            e.printStackTrace();
+        } catch (NoSuchElementException e) {
+            System.out.println("Element not found: " + e.getMessage());
+            e.printStackTrace();
+        } catch (StaleElementReferenceException e) {
+            System.out.println("Stale element reference: " + e.getMessage());
+            e.printStackTrace();
+        } catch (TimeoutException e) {
+            System.out.println("Timeout while waiting for element: " + e.getMessage());
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            System.out.println("Thread interrupted: " + e.getMessage());
+            e.printStackTrace();
+        } catch (Exception e) {
+            System.out.println("Unexpected error encountered: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
