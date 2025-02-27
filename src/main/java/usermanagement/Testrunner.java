@@ -10,7 +10,7 @@ public class Testrunner {
         WebDriver driver = new ChromeDriver();
         //sampath
         // Navigate to the login page
-        driver.get("https://vividtranstech.com/tancem/#/login"); 
+       driver.get("https://vividtranstech.com/tancem/#/login"); 
 
         // Call the grade and section methods from the master class
 		
