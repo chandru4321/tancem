@@ -1,4 +1,4 @@
-package usermanagement;
+package Inventory;
 
 import java.time.Duration;
 import org.openqa.selenium.By;
